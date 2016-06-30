@@ -1,4 +1,4 @@
-package Activity;
+package activity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -40,7 +40,8 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
         List<HashMap<String,Object>> hashMapList = new ArrayList<HashMap<String,Object>>();
         for (int i=0;i<9;i++){
             HashMap<String,Object> hashMap = new HashMap<String, Object>();
-            hashMap.put(gv_name[i],gv_image[i]);
+            hashMap.put(IMAGE,gv_image[i]);
+            hashMap.put(NAME,gv_name[i]);
             hashMapList.add(hashMap);
         }
         return hashMapList;

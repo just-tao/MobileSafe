@@ -1,4 +1,4 @@
-package Activity;
+package activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -22,10 +22,10 @@ public class SplashActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         version = (TextView)findViewById(R.id.app_version);
-        version.setText(getVersion());
+        version.setText("Version:"+getVersion());
         Intent startHome = new Intent(this,HomeActivity.class);
         startActivity(startHome);
-        finish();
+        //finish();
     }
     private String getVersion(){
         PackageManager pm = getPackageManager();

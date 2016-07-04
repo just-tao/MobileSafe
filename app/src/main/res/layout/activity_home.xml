@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:gravity="center">
+    <TextView
+        android:text="功能列表"
+        android:id="@+id/title_bar"
+        style="@style/TitleStyle"/>
     <GridView
+        android:paddingTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/gv_home"
         android:numColumns="3"
-        android:verticalSpacing="10dp"
+        android:verticalSpacing="100dp"
         android:horizontalSpacing="10dp"
-        android:stretchMode="columnWidth">
+        android:stretchMode="columnWidth"
+        android:layout_below="@+id/title_bar">
 
     </GridView>
 

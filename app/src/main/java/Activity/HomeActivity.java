@@ -1,6 +1,8 @@
 package activity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -56,12 +58,25 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         switch(position){
+            case 0:
+                initDialog();
+                break;
             case 8:
                 Intent intent = new Intent(getApplicationContext(),SettingActivity.class);
                 startActivity(intent);
                 break;
         }
     }
+
+    private void initDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater layoutInflater = LayoutInflater.from(this);
+        View view = layoutInflater.inflate(R.layout.dialog_setting_psd,null);
+        builder.setView(view);
+        AlertDialog alerDialog = builder.create();
+        alerDialog.show();
+    }
+
 
     private void initUI(){
         gridViewHome = (GridView)findViewById(R.id.gv_home);

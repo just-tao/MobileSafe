@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:setting="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
  <TextView
@@ -8,8 +9,14 @@
  <view.SettingItemView
      android:id="@+id/auto_update"
      android:layout_width="match_parent"
-     android:layout_height="wrap_content"></view.SettingItemView>
+     android:layout_height="wrap_content"
+     setting:title="自动更新设置"
+     setting:descoff="自动更新已关闭"
+     setting:descon="自动更新已开启"></view.SettingItemView>
  <view.SettingItemView
      android:layout_width="match_parent"
-     android:layout_height="wrap_content"></view.SettingItemView>
+     android:layout_height="wrap_content"
+     setting:title="电话归属地显示设置"
+     setting:descoff="归属地设置已关闭"
+     setting:descon="归属地设置已开启"></view.SettingItemView>
 </LinearLayout>
